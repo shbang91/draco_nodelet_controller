@@ -1,0 +1,165 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CallGetService	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::CallGetService(const std::string &slave_name,$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+CallSetService	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::CallSetService(const std::string &slave_name,$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+ClearFaults	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::ClearFaults() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+Clock	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^typedef std::chrono::high_resolution_clock Clock;$/;"	t
+ConstructRPC	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::ConstructRPC() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+CopyCommand	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::CopyCommand() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+CopyData	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::CopyData() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+DestructRPC	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::DestructRPC() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+DracoNodeletController	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^class DracoNodeletController : public nodelet::Nodelet {$/;"	c	namespace:draco_nodelet_controller
+DracoNodeletController	src/draco_nodelet_controller.cpp	/^DracoNodeletController::DracoNodeletController() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+FakeEstopHandler	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::FakeEstopHandler($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+FaultHandler	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::FaultHandler($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+GainsAndLimitsHandler	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::GainsAndLimitsHandler($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+InterruptHandler	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::InterruptHandler($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftAnkleFEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftAnkleFEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftAnkleFEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftAnkleFEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftAnkleIEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftAnkleIEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftAnkleIEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftAnkleIEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftHipAAKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftHipAAKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftHipAAKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftHipAAKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftHipFEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftHipFEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftHipFEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftHipFEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftHipIEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftHipIEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftHipIEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftHipIEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftKneeFEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftKneeFEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LeftKneeFEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::LeftKneeFEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+LoadConfigFile	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::LoadConfigFile() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+ModeHandler	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::ModeHandler($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+ProcessServiceCalls	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::ProcessServiceCalls() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RPCHandler	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RPCHandler($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RegisterData	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::RegisterData() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightAnkleFEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightAnkleFEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightAnkleFEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightAnkleFEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightAnkleIEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightAnkleIEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightAnkleIEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightAnkleIEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightHipAAKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightHipAAKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightHipAAKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightHipAAKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightHipFEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightHipFEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightHipFEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightHipFEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightHipIEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightHipIEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightHipIEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightHipIEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightKneeFEKdCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightKneeFEKdCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+RightKneeFEKpCallback	src/draco_nodelet_controller.cpp	/^bool DracoNodeletController::RightKneeFEKpCallback($/;"	f	class:draco_nodelet_controller::DracoNodeletController
+SetGainsAndLimits	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::SetGainsAndLimits() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+SetSafeCommand	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::SetSafeCommand() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+TurnOffMotors	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::TurnOffMotors() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+TurnOnJointImpedance	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::TurnOnJointImpedance() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+TurnOnLowerBodyJointImpedance	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::TurnOnLowerBodyJointImpedance() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+TurnOnMotorCurrent	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::TurnOnMotorCurrent() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+TurnOnUpperBodyJointImpedance	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::TurnOnUpperBodyJointImpedance() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+UpdateLowLevelGains	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::UpdateLowLevelGains() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+actuator_speed_ratio_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float> actuator_speed_ratio_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+axons_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<std::string> axons_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_change_lb_to_joint_impedance_mode_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_change_lb_to_joint_impedance_mode_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_change_to_joint_impedance_mode_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_change_to_joint_impedance_mode_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_change_to_motor_current_mode_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_change_to_motor_current_mode_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_change_to_off_mode_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_change_to_off_mode_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_change_ub_to_joint_impedance_mode_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_change_ub_to_joint_impedance_mode_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_clear_faults_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_clear_faults_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_construct_rpc_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_construct_rpc_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_destruct_rpc_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_destruct_rpc_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_fake_estop_released_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_fake_estop_released_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_gains_limits_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_gains_limits_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_initializing_imu_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_initializing_imu_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_interrupt_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_interrupt_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_measure_computation_time_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_measure_computation_time_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_rpc_alive_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_rpc_alive_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+b_use_int_frc_command_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  bool b_use_int_frc_command_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+computation_time_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  double computation_time_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+contact_threshold_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  double contact_threshold_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+control_mode	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^namespace control_mode {$/;"	n	namespace:draco_nodelet_controller
+control_mode_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  int control_mode_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+count_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  int count_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+debug_interface_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  boost::shared_ptr<aptk::util::DebugInterfacer> debug_interface_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+diff_jpos_mjpos_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  Eigen::VectorXd diff_jpos_mjpos_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+draco_nodelet_controller	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^namespace draco_nodelet_controller {$/;"	n
+draco_nodelet_controller	src/draco_nodelet_controller.cpp	/^namespace draco_nodelet_controller {$/;"	n	file:
+end_time_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::chrono::high_resolution_clock::time_point init_time_, end_time_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+fake_estop_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer fake_estop_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+fault_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer fault_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+gain_limit_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer gain_limit_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+init_time_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::chrono::high_resolution_clock::time_point init_time_, end_time_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+interrupt_data_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  int interrupt_data_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+interrupt_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer interrupt_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+kJointImpedance	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^constexpr int kJointImpedance = 2;$/;"	m	namespace:draco_nodelet_controller::control_mode
+kMotorCurrent	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^constexpr int kMotorCurrent = 1;$/;"	m	namespace:draco_nodelet_controller::control_mode
+kOff	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^constexpr int kOff = 0;$/;"	m	namespace:draco_nodelet_controller::control_mode
+lb_low_level_kd_gains_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float> lb_low_level_kd_gains_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+lb_low_level_kp_gains_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float> lb_low_level_kp_gains_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_ankle_fe_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_ankle_fe_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_ankle_fe_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_ankle_fe_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_ankle_ie_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_ankle_ie_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_ankle_ie_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_ankle_ie_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_hip_aa_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_hip_aa_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_hip_aa_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_hip_aa_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_hip_fe_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_hip_fe_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_hip_fe_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_hip_fe_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_hip_ie_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_hip_ie_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_hip_ie_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_hip_ie_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_knee_fe_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_knee_fe_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+left_knee_fe_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer left_knee_fe_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+lower_leg_axons_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<std::string> lower_leg_axons_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+lower_leg_idx_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<int> lower_leg_idx_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+medullas_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<std::string> medullas_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+mode_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer mode_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+motor_pos_polarity_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float> motor_pos_polarity_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+n_joints_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  int n_joints_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+n_medulla_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  int n_medulla_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+n_sensillum_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  int n_sensillum_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+nh_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::NodeHandle nh_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+nodelet_cfg_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  YAML::Node nodelet_cfg_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+onInit	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::onInit() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+ph_current_cmd_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_current_cmd_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_ang_vel_x_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_imu_ang_vel_x_, *ph_imu_ang_vel_y_, *ph_imu_ang_vel_z_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_ang_vel_y_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_imu_ang_vel_x_, *ph_imu_ang_vel_y_, *ph_imu_ang_vel_z_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_ang_vel_z_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_imu_ang_vel_x_, *ph_imu_ang_vel_y_, *ph_imu_ang_vel_z_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_quaternion_w_ned_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_imu_quaternion_w_ned_, *ph_imu_quaternion_x_ned_,$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_quaternion_x_ned_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_imu_quaternion_w_ned_, *ph_imu_quaternion_x_ned_,$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_quaternion_y_ned_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^      *ph_imu_quaternion_y_ned_, *ph_imu_quaternion_z_ned_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_imu_quaternion_z_ned_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^      *ph_imu_quaternion_y_ned_, *ph_imu_quaternion_z_ned_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_joint_efforts_cmd_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_joint_efforts_cmd_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_joint_positions_cmd_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_joint_positions_cmd_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_joint_positions_data_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_joint_positions_data_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_joint_velocities_cmd_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_joint_velocities_cmd_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_joint_velocities_data_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_joint_velocities_data_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_kd_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_kd_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_kp_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_kp_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_lfoot_sg_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_rfoot_sg_, *ph_lfoot_sg_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_linkage_speed_ratio_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_linkage_speed_ratio_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_motor_positions_data_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<float *> ph_motor_positions_data_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+ph_rfoot_sg_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  float *ph_rfoot_sg_, *ph_lfoot_sg_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+pin_joints_idx_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<int> pin_joints_idx_; \/\/ based on mapping between axons name and$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_ankle_fe_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_ankle_fe_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_ankle_fe_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_ankle_fe_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_ankle_ie_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_ankle_ie_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_ankle_ie_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_ankle_ie_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_hip_aa_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_hip_aa_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_hip_aa_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_hip_aa_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_hip_fe_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_hip_fe_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_hip_fe_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_hip_fe_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_hip_ie_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_hip_ie_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_hip_ie_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_hip_ie_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_knee_fe_kd_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_knee_fe_kd_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+right_knee_fe_kp_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer right_knee_fe_kp_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+rpc_command_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  DracoCommand *rpc_command_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+rpc_handler_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  ros::ServiceServer rpc_handler_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+rpc_interface_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  DracoInterface *rpc_interface_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+rpc_sensor_data_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  DracoSensorData *rpc_sensor_data_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+sensillums_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<std::string> sensillums_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+sleep_time_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  double sleep_time_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+spinThread	src/draco_nodelet_controller.cpp	/^void DracoNodeletController::spinThread() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController
+spin_thread_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  boost::shared_ptr<boost::thread> spin_thread_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+sync_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  boost::shared_ptr<aptk::comm::Synchronizer> sync_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+target_joint_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::string target_joint_; \/\/ for the purpose of moving joint one by one.$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+upper_body_axons_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  std::vector<std::string> upper_body_axons_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+world_av_imu_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  Eigen::Vector3d world_av_imu_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+world_q_imu_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  Eigen::Quaternion<double> world_q_imu_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+world_q_local_ned_	include/draco_nodelet_controller/draco_nodelet_controller.hpp	/^  Eigen::Quaternion<double> world_q_local_ned_;$/;"	m	class:draco_nodelet_controller::DracoNodeletController
+~DracoNodeletController	src/draco_nodelet_controller.cpp	/^DracoNodeletController::~DracoNodeletController() {$/;"	f	class:draco_nodelet_controller::DracoNodeletController

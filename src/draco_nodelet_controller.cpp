@@ -30,31 +30,18 @@ DracoNodeletController::DracoNodeletController() {
             "R_Shoulder_AA", "R_Shoulder_IE", "R_Elbow",       "R_Wrist_Roll",
             "R_Wrist_Pitch"};
 
-  joint_names_ = {"l_hip_ie",      "l_hip_aa",      "l_hip_fe",
-                  "l_knee_fe",     "l_ankle_fe",    "l_ankle_ie",
-                  "l_shoulder_fe", "l_shoulder_aa", "l_shoulder_ie",
-                  "l_elbow_fe",    "l_wrist_ps",    "l_wrist_pitch",
-                  "neck_pitch",    "r_hip_ie",      "r_hip_aa",
-                  "r_hip_fe",      "r_knee_fe",     "r_ankre_fe",
-                  "r_ankre_ie",    "r_shourder_fe", "r_shourder_aa",
-                  "r_shourder_ie", "r_erbow_fe",    "r_wrist_ps",
-                  "r_wrist_pitch"}
+  // joint_names_ = {"l_hip_ie",      "l_hip_aa",      "l_hip_fe",
+  //"l_knee_fe_jp", "l_knee_fe_jd",    "l_ankle_fe",    "l_ankle_ie",
+  //"l_shoulder_fe", "l_shoulder_aa", "l_shoulder_ie",
+  //"l_elbow_fe",    "l_wrist_ps",    "l_wrist_pitch",
+  //"neck_pitch",    "r_hip_ie",      "r_hip_aa",
+  //"r_hip_fe",      "r_knee_fe_jp", "r_knee_fe_jd",    "r_ankle_fe",
+  //"r_ankle_ie",    "r_shourder_fe", "r_shourder_aa",
+  //"r_shourder_ie", "r_erbow_fe",    "r_wrist_ps",
+  //"r_wrist_pitch"} //pinocchio robot model joint order
 
-  axons_to_pin_joints_map_ = {}
-
-  // joint_names_ = {
-  //"neck_pitch",    "r_hip_ie",      "r_hip_aa",      "r_hip_fe",
-  //"r_knee_fe",     "r_ankle_fe",    "r_ankle_ie",    "l_hip_ie",
-  //"l_hip_aa",      "l_hip_fe",      "l_knee_fe",     "l_ankle_fe",
-  //"l_ankle_ie",    "l_shoulder_fe", "l_shoulder_aa", "l_shoulder_ie",
-  //"l_elbow_fe",    "l_wrist_ps",    "l_wrist_pitch", "r_shoulder_fe",
-  //"r_shoulder_aa", "r_shoulder_ie", "r_elbow_fe",    "r_wrist_ps",
-  //"r_wrist_pitch"};
-
-  lower_body_joint_names_ = {"r_hip_ie",  "r_hip_aa",   "r_hip_fe",
-                             "r_knee_fe", "r_ankle_fe", "r_ankle_ie",
-                             "l_hip_ie",  "l_hip_aa",   "l_hip_fe",
-                             "l_knee_fe", "l_ankle_fe", "l_ankle_ie"};
+  pin_joints_idx_ = {7, 8, 9, 10, 10, 11, 12, 13, 14, 15, 16, 17, 18, 0,
+                     1, 2, 3, 4,  4,  5,  6,  19, 20, 21, 22, 23, 24};
 
   // TEST: when the right leg was disconnected
   // lower_leg_axons_ = {"L_Hip_IE",  "L_Hip_AA",   "L_Hip_FE",
@@ -81,26 +68,26 @@ DracoNodeletController::DracoNodeletController() {
 
   count_ = 0;
   sleep_time_ = 0.7;
-  n_joint_ = axons_.size();
+  n_joints_ = axons_.size();
   n_medulla_ = medullas_.size();
   n_sensillum_ = sensillums_.size();
 
-  ph_joint_positions_data_.resize(n_joint_);
-  ph_motor_positions_data_.resize(n_joint_);
-  ph_linkage_speed_ratio_.resize(n_joint_);
-  ph_kp_.resize(n_joint_);
-  ph_kd_.resize(n_joint_);
-  ph_joint_velocities_data_.resize(n_joint_);
-  ph_joint_positions_cmd_.resize(n_joint_);
-  ph_joint_velocities_cmd_.resize(n_joint_);
-  ph_joint_efforts_cmd_.resize(n_joint_);
-  ph_current_cmd_.resize(n_joint_);
+  ph_joint_positions_data_.resize(n_joints_);
+  ph_motor_positions_data_.resize(n_joints_);
+  ph_linkage_speed_ratio_.resize(n_joints_);
+  ph_kp_.resize(n_joints_);
+  ph_kd_.resize(n_joints_);
+  ph_joint_velocities_data_.resize(n_joints_);
+  ph_joint_positions_cmd_.resize(n_joints_);
+  ph_joint_velocities_cmd_.resize(n_joints_);
+  ph_joint_efforts_cmd_.resize(n_joints_);
+  ph_current_cmd_.resize(n_joints_);
 
   b_rpc_alive_ = true;
 
-  actuator_speed_ratio_.resize(n_joint_);
-  motor_pos_polarity_.resize(n_joint_);
-  diff_jpos_mjpos_ = Eigen::VectorXd::Zero(n_joint_);
+  actuator_speed_ratio_.resize(n_joints_);
+  motor_pos_polarity_.resize(n_joints_);
+  diff_jpos_mjpos_ = Eigen::VectorXd::Zero(n_joints_);
 
   rpc_interface_ = new DracoInterface();
   rpc_sensor_data_ = new DracoSensorData();
@@ -134,7 +121,7 @@ DracoNodeletController::DracoNodeletController() {
 
 DracoNodeletController::~DracoNodeletController() {
   spin_thread_->join();
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     delete ph_joint_positions_data_[i];
     delete ph_motor_positions_data_[i];
     delete ph_linkage_speed_ratio_[i];
@@ -317,7 +304,7 @@ void DracoNodeletController::spinThread() {
 }
 
 void DracoNodeletController::SetSafeCommand() {
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     *(ph_joint_positions_cmd_[i]) = *(ph_joint_positions_data_[i]);
     *(ph_joint_velocities_cmd_[i]) = 0.;
     *(ph_joint_efforts_cmd_[i]) = 0.;
@@ -380,7 +367,7 @@ void DracoNodeletController::RegisterData() {
   std::cout << "DracoNodeletController::RegisterData()" << std::endl;
   int r_ankle_ie_idx(0), l_ankle_ie_idx(0), r_ankle_fe_idx(0),
       l_ankle_fe_idx(0);
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     // get parameter
     sync_->getParam<float>("Actuator__Speed_ratio", actuator_speed_ratio_[i],
                            axons_[i]);
@@ -477,8 +464,8 @@ void DracoNodeletController::CopyData() {
   rpc_sensor_data_->imu_frame_quat_ << world_q_imu.vec(), world_q_imu.w();
   rpc_sensor_data_->imu_ang_vel = world_av_imu_;
 
-  // compute joint positions from motor
-  for (int i = 0; i < n_joint_; ++i) {
+  // compute joint positions from motor to check gear ratio set correctly
+  for (int i = 0; i < n_joints_; ++i) {
     float joint_pos = *(ph_joint_positions_data_[i]);
     float motor_pos = *(ph_motor_positions_data_[i]);
     float dynamic_speed_ratio = *(ph_linkage_speed_ratio_[i]);
@@ -501,76 +488,55 @@ void DracoNodeletController::CopyData() {
 
   // TODO
   // Set encoder data
-  for (int i = 0; i < n_joint_; i++) {
+  for (int i = 0; i < pin_joints_idx_.size(); i++) {
+    rpc_sensor_data_->joint_pos_[i] =
+        static_cast<double>(*(ph_joint_positions_data_[pin_joints_idx_[i]]));
+    rpc_sensor_data_->joint_vel_[i] =
+        static_cast<double>(*ph_joint_velocities_data_[pin_joints_idx_[i]]);
   }
-  // for (int i = 0; i < n_joint_; ++i) {
-  // if (joint_names_[i] == "r_knee_fe") {
-  // r_knee_fe_jp
-  // rpc_sensor_data_->joint_positions["r_knee_fe_jp"] =
-  // static_cast<double>(*(ph_joint_positions_data_[i])) / 2.;
-  // rpc_sensor_data_->joint_velocities["r_knee_fe_jp"] =
-  // static_cast<double>(*(ph_joint_velocities_data_[i])) / 2.;
-  // r_knee_fe_jd
-  // rpc_sensor_data_->joint_positions["r_knee_fe_jd"] =
-  // static_cast<double>(*(ph_joint_positions_data_[i])) / 2.;
-  // rpc_sensor_data_->joint_velocities["r_knee_fe_jd"] =
-  // static_cast<double>(*(ph_joint_velocities_data_[i])) / 2.;
-  //} else if (joint_names_[i] == "l_knee_fe") {
-  // l_knee_fe_jp
-  // rpc_sensor_data_->joint_positions["l_knee_fe_jp"] =
-  // static_cast<double>(*(ph_joint_positions_data_[i])) / 2.;
-  // rpc_sensor_data_->joint_velocities["l_knee_fe_jp"] =
-  // static_cast<double>(*(ph_joint_velocities_data_[i])) / 2.;
-  // l_knee_fe_jd
-  // rpc_sensor_data_->joint_positions["l_knee_fe_jd"] =
-  // static_cast<double>(*(ph_joint_positions_data_[i])) / 2.;
-  // rpc_sensor_data_->joint_velocities["l_knee_fe_jd"] =
-  // static_cast<double>(*(ph_joint_velocities_data_[i])) / 2.;
-  //} else {
-  // rpc_sensor_data_->joint_positions[joint_names_[i]] =
-  // static_cast<double>(*(ph_joint_positions_data_[i]));
-  // rpc_sensor_data_->joint_velocities[joint_names_[i]] =
-  // static_cast<double>(*(ph_joint_velocities_data_[i]));
-  //}
-  //}
+  // update rolling contact joint cmd
+  rpc_sensor_data_->joint_pos_[3] =
+      static_cast<double>(*(ph_joint_positions_data_[10]) * 0.5);
+  rpc_sensor_data_->joint_pos_[4] =
+      static_cast<double>(*(ph_joint_positions_data_[10]) * 0.5);
+  rpc_sensor_data_->joint_pos_[17] =
+      static_cast<double>(*(ph_joint_positions_data_[4]) * 0.5);
+  rpc_sensor_data_->joint_pos_[18] =
+      static_cast<double>(*(ph_joint_positions_data_[4]) * 0.5);
+
+  rpc_sensor_data_->joint_vel_[3] =
+      static_cast<double>(*(ph_joint_velocities_data_[10]) * 0.5);
+  rpc_sensor_data_->joint_vel_[4] =
+      static_cast<double>(*(ph_joint_velocities_data_[10]) * 0.5);
+  rpc_sensor_data_->joint_vel_[17] =
+      static_cast<double>(*(ph_joint_velocities_data_[4]) * 0.5);
+  rpc_sensor_data_->joint_vel_[18] =
+      static_cast<double>(*(ph_joint_velocities_data_[4]) * 0.5);
 }
 
 // TODO
 void DracoNodeletController::CopyCommand() {
-  for (int i = 0; i < n_joint_; ++i) {
-    if (joint_names_[i] == "r_knee_fe") {
-      *(ph_joint_positions_cmd_[i]) = static_cast<float>(
-          rpc_command_->joint_positions["r_knee_fe_jd"] * 2.);
-      *(ph_joint_velocities_cmd_[i]) = static_cast<float>(
-          rpc_command_->joint_velocities["r_knee_fe_jd"] * 2.);
-      if (b_use_int_frc_command_) {
-        *(ph_joint_efforts_cmd_[i]) =
-            static_cast<float>(rpc_command_->r_knee_int_frc);
-      } else {
-        *(ph_joint_efforts_cmd_[i]) = static_cast<float>(
-            rpc_command_->joint_torques["r_knee_fe_jd"] / 2.);
-      }
-    } else if (joint_names_[i] == "l_knee_fe") {
-      *(ph_joint_positions_cmd_[i]) = static_cast<float>(
-          rpc_command_->joint_positions["l_knee_fe_jd"] * 2.);
-      *(ph_joint_velocities_cmd_[i]) = static_cast<float>(
-          rpc_command_->joint_velocities["l_knee_fe_jd"] * 2.);
-      if (b_use_int_frc_command_) {
-        *(ph_joint_efforts_cmd_[i]) =
-            static_cast<float>(rpc_command_->l_knee_int_frc);
-      } else {
-        *(ph_joint_efforts_cmd_[i]) = static_cast<float>(
-            rpc_command_->joint_torques["l_knee_fe_jd"] / 2.);
-      }
-    } else {
-      *(ph_joint_positions_cmd_[i]) =
-          static_cast<float>(rpc_command_->joint_positions[joint_names_[i]]);
-      *(ph_joint_velocities_cmd_[i]) =
-          static_cast<float>(rpc_command_->joint_velocities[joint_names_[i]]);
-      *(ph_joint_efforts_cmd_[i]) =
-          static_cast<float>(rpc_command_->joint_torques[joint_names_[i]]);
-    }
+  for (int i = 0; i < pin_joints_idx_.size(); i++) {
+    *(ph_joint_positions_cmd_[pin_joints_idx_[i]]) =
+        static_cast<float>(rpc_command_->joint_pos_cmd_[i]);
+    *(ph_joint_velocities_cmd_[pin_joints_idx_[i]]) =
+        static_cast<float>(rpc_command_->joint_vel_cmd_[i]);
+    *(ph_joint_efforts_cmd_[pin_joints_idx_[i]]) =
+        static_cast<float>(rpc_command_->joint_trq_cmd_[i]);
   }
+  // update rolling contact joint cmd
+  *(ph_joint_positions_cmd_[10]) =
+      static_cast<float>(rpc_command_->joint_pos_cmd_[4] * 2.);
+  *(ph_joint_positions_cmd_[4]) =
+      static_cast<float>(rpc_command_->joint_pos_cmd_[18] * 2.);
+  *(ph_joint_velocities_cmd_[10]) =
+      static_cast<float>(rpc_command_->joint_vel_cmd_[4] * 2.);
+  *(ph_joint_velocities_cmd_[4]) =
+      static_cast<float>(rpc_command_->joint_vel_cmd_[18] * 2.);
+  *(ph_joint_efforts_cmd_[10]) =
+      static_cast<float>(rpc_command_->joint_trq_cmd_[4] * 0.5);
+  *(ph_joint_efforts_cmd_[4]) =
+      static_cast<float>(rpc_command_->joint_trq_cmd_[18] * 0.5);
 }
 
 void DracoNodeletController::SetGainsAndLimits() {
@@ -581,7 +547,7 @@ void DracoNodeletController::SetGainsAndLimits() {
   apptronik_srvs::Float32 srv_float_kd;
   apptronik_srvs::Float32 srv_float_current_limit;
 
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     if (b_conservative) {
       *(ph_kp_[i]) = util::ReadParameter<float>(
           nodelet_cfg_["service_call"][joint_names_[i]], "weak_kp");
@@ -756,7 +722,7 @@ bool DracoNodeletController::FakeEstopHandler(
 
 void DracoNodeletController::TurnOffMotors() {
   b_fake_estop_released_ = false;
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     sync_->changeMode("OFF", axons_[i]);
     sleep(sleep_time_);
   }
@@ -790,7 +756,7 @@ void DracoNodeletController::TurnOnLowerBodyJointImpedance() {
 
 void DracoNodeletController::TurnOnJointImpedance() {
   if (b_rpc_alive_) {
-    for (int i = 0; i < n_joint_; ++i) {
+    for (int i = 0; i < n_joints_; ++i) {
       sync_->changeMode("JOINT_IMPEDANCE", axons_[i]);
       sleep(sleep_time_);
     }
@@ -801,14 +767,14 @@ void DracoNodeletController::TurnOnJointImpedance() {
 }
 
 void DracoNodeletController::TurnOnMotorCurrent() {
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     sync_->changeMode("MOTOR_CURRENT", axons_[i]);
     sleep(1.0);
   }
 }
 
 void DracoNodeletController::ClearFaults() {
-  for (int i = 0; i < n_joint_; ++i) {
+  for (int i = 0; i < n_joints_; ++i) {
     sync_->clearFaults(axons_[i]);
     sleep(sleep_time_);
   }

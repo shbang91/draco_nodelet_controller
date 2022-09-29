@@ -90,7 +90,7 @@ private:
   double sleep_time_;
 
   // counting
-  int n_joint_;
+  int n_joints_;
   int n_medulla_;
   int n_sensillum_;
 
@@ -103,10 +103,9 @@ private:
   std::vector<std::string> sensillums_;
 
   // actuating joint name corresponding to the axons
-  std::vector<std::string> joint_names_;
-  std::vector<std::string> lower_body_joint_names_;
-
-  std::unordered_map<std::string, int> axons_to_pin_joints_map_;
+  // std::vector<std::string> joint_names_;
+  std::vector<int> pin_joints_idx_; // based on mapping between axons name and
+                                    // pinocchio robot model joint order
 
   // placeholders for data coming through ecat communication
   // this placeholders shares the same order with axons_
